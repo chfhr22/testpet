@@ -1,0 +1,31 @@
+.active {
+    background-color: var(--mainColor) !important;
+    color: var(--white) !important;
+}
+
+.blind {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 300px;
+}
+
+.input__style {
+    width: 100%;
+    background-color: var(--subColor);
+    color: var(--white);
+    margin: 5px auto;
+    border-radius: 0px 10px 10px 10px;
+    padding: 6px 15px 10px 15px;
+    font-size: .9rem;
+
+    &:nth-child(even) {
+        background-color: var(--white);
+        color: var(--black);
+        border-radius: 10px 0px 10px 10px;
+        box-shadow: 1px 1px 5px 0px #D9D9D9;
+    }
+}

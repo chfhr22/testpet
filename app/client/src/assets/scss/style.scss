@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/common";
+
+// section
+@import 'section/layout';
+@import 'section/footer';
+@import 'section/header';
+@import 'section/nav';
+
+// page
+@import 'page/home';
+@import 'page/com';
+@import 'page/login';
+@import 'page/mypage';
+@import 'page/info';
+@import 'page/find';
+@import 'page/infoDetail';
+// @import 'page/postWrite';
+@import 'page/reple';

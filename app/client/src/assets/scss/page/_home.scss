@@ -1,0 +1,238 @@
+#homePage {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #F3F4F5;
+
+    @media(max-width:1280px) {
+        width: 100% !important;
+    }
+
+    .filter__wrap {
+
+        ul {
+            display: flex;
+            margin: 1rem 0;
+            gap: 0.3rem;
+
+            @media(max-width:480px) {
+                justify-content: center;
+            }
+
+            li {
+
+                a {
+                    display: block;
+                    padding: 0.4rem 1rem;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    background-color: var(--white200);
+                    color: #fff;
+
+                    @media (max-width:400px) {
+                        font-size: 0.8rem;
+                        padding: 0.2rem 0.8rem;
+                    }
+
+                    @media(max-width:350px) {
+                        padding: 0.2rem 0.5rem;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .contents__wrap {
+        width: 100%;
+        height: 100%;
+        background-color: var(--white);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .contents {
+        width: 50%;
+        margin-bottom: 50px;
+
+        @media(max-width:1020px) {
+            width: 75%;
+        }
+
+        @media(max-width:480px) {
+            width: 95%;
+        }
+
+        .contents__top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 25px 0;
+
+            .shelter {
+                font-size: 1.25rem;
+                color: var(--black300);
+                line-height: 1;
+            }
+
+            .total__like {
+                font-size: 0.8rem;
+                color: var(--black300);
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 16px;
+                }
+
+                p {
+                    margin-left: 5px;
+                }
+            }
+
+            .image {
+                width: 100%;
+                margin-top: 15px;
+
+                .img {
+                    height: 360px;
+                    border-radius: 10px;
+                    background-color: #ccc;
+                }
+            }
+        }
+
+        .contents__bottom {
+            .info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+
+                @media(max-width:480px) {
+                    flex-direction: column;
+
+                    .left {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    .profile {
+                        width: 35px;
+                        height: 35px;
+                        background-color: #ccc;
+                        border-radius: 50%;
+
+                        @media(max-width:480px) {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                    }
+
+                    .name {
+                        position: relative;
+                        margin-left: 5px;
+
+                        // &::after {
+                        //     content: '';
+                        //     position: absolute;
+                        //     width: 3px;
+                        //     height: 3px;
+                        //     border-radius: 50%;
+                        //     left: 108%;
+                        //     top: 45%;
+                        //     background-color: var(--black);
+                        // }
+                    }
+
+                    .date {
+                        margin-left: 10px;
+                        color: var(--black400);
+                        font-size: 0.8rem;
+                    }
+
+                    .call {
+                        margin-left: 5px;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-top: -2px;
+                        }
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    align-items: center;
+
+                    >div {
+                        margin-left: 13px;
+
+                        svg {
+                            width: 25px;
+                            height: 25px;
+
+                            @media(max-width:680px) {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .board {
+                .title {
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                }
+
+                .content {
+                    font-size: 1rem;
+                    color: var(--black300);
+                    margin-bottom: 15px;
+                    @include line-two;
+                }
+
+                .all {
+                    font-size: 1rem;
+                    color: var(--black300);
+                    margin-bottom: 15px;
+                }
+
+                .more {
+                    display: inline;
+                    cursor: pointer;
+
+                    &.hide {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.liked-heart {
+    color: red;
+}

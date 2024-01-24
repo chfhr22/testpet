@@ -1,0 +1,92 @@
+#headerSection {
+    height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    position: relative;
+
+    .header__logo {
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        .logo__img {
+            @media(max-width:400px) {
+                width: 80%;
+            }
+        }
+
+        .logo__text {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--black300);
+
+            em {
+                font-size: 24px;
+                color: var(--subColor);
+            }
+        }
+
+        @media(max-width:1020px) {
+            padding: 0;
+        }
+    }
+
+    .header__profile {
+        display: flex;
+        align-items: center;
+
+        .noti {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                @media(max-width:400px) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .new {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                left: 85%;
+                top: 0;
+                background-color: var(--mainColor);
+            }
+        }
+
+        .profile {
+            margin-left: 1rem;
+
+            a {
+                width: 40px;
+                height: 40px;
+                border: 1px solid var(--black600);
+                border-radius: 50%;
+                display: inline-block;
+
+                img {
+                    border-radius: 50%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            @media(max-width:400px) {
+                width: 30px;
+                height: 30px;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

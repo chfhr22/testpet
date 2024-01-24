@@ -1,0 +1,125 @@
+#footerSection {
+    background-color: #F3F4F5;
+    height: 100%;
+    box-sizing: border-box;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .chating__wrap {
+        width: 100%;
+        max-width: 300px;
+        height: calc(100% - 100px);
+        margin-top: 20px;
+        background-color: var(--white);
+        border-radius: 20px;
+        overflow: auto;
+
+        h2 {
+            font-size: 1.1rem;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .chating {
+            padding: 20px;
+            box-sizing: border-box;
+
+            .chating__box {
+                margin-bottom: 10px;
+
+                &.my-message {
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                }
+
+                .chating__author {
+                    display: flex;
+                    align-items: center;
+
+                    &.my-message {
+                        width: 100%;
+                        justify-content: right;
+                    }
+
+                    &.other-message {
+                        justify-content: left;
+                    }
+
+                    .author__photo {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .name {
+                        position: relative;
+                        padding: 0 5px;
+                    }
+
+                    .time {
+                        font-size: 13px;
+                        color: var(--black400);
+                    }
+                }
+
+                .chating__cont {
+                    background-color: var(--subColor);
+                    color: var(--white);
+                    margin: 5px 0;
+                    border-radius: 0px 10px 10px 10px;
+                    padding: 6px 15px 10px 15px;
+                    font-size: .9rem;
+                    display: inline-block;
+
+
+                    &.my-message {
+                        background-color: var(--white);
+                        color: var(--black);
+                        border-radius: 10px 0px 10px 10px;
+                        box-shadow: 1px 1px 5px 0px #D9D9D9;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .chating__wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chating__submit {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        input {
+            width: 75%;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid var(--black500);
+            border-radius: 20px;
+        }
+
+        button {
+            width: 20%;
+            border: 1px solid var(--black500);
+            border-radius: 20px;
+            padding: 9px;
+            margin-left: 5px;
+            background-color: var(--white);
+
+            &:hover {
+                background-color: var(--subColor);
+            }
+        }
+    }
+}

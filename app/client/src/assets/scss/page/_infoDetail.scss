@@ -1,0 +1,93 @@
+#InfoDetailPage {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #F3F4F5;
+    padding: 20px;
+
+    .info__detail__page {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: var(--white);
+        padding: 20px;
+        position: relative;
+
+        .info__detail__title {}
+
+        .info__detail__author {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--black500);
+
+            .author {
+                position: relative;
+                margin-left: 30px;
+
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
+                    background-color: #f00;
+                    position: absolute;
+                    left: -30px;
+                    top: 0;
+                }
+            }
+        }
+
+        .info__detail__cont {
+            width: 100%;
+            margin-top: 20px;
+            overflow: auto;
+
+            .info__detail__img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+            }
+
+            .info__detail__text {
+                width: 80%;
+                margin: 20px auto 0 auto;
+                font-size: 1rem;
+                white-space: pre-line;
+            }
+        }
+
+        .info__detail__cont::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera*/
+        }
+    }
+
+    .info__detail__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        gap: 1rem;
+
+
+        a {
+            padding: 10px 20px;
+            background-color: var(--mainColor);
+            border-radius: 20px;
+            font-size: .8rem;
+            margin-top: 2%;
+
+            &.list {
+                margin: 2% 20px 0;
+            }
+        }
+    }
+}

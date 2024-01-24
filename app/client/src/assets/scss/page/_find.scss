@@ -1,0 +1,183 @@
+#findSection {
+    height: 100%;
+
+    .find__container {
+        margin: 0 auto;
+        height: 100%;
+        overflow: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .find__boxWrap {
+            height: calc(100% - 87px);
+            overflow: auto;
+        }
+
+        .find__cate {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                text-align: center;
+                gap: 1rem;
+
+                li {
+                    select {
+                        min-width: 120px;
+                        padding: 0.5rem;
+                        border-radius: 20px;
+                        background-color: #f3f3f3;
+                        border: 1px solid transparent;
+                        outline: none;
+                        transition: all 0.3s;
+                        color: #333;
+                        cursor: pointer;
+                        /* Darker text color for better visibility */
+
+                        &:focus {
+                            background-color: #e4e4e4;
+                            /* White text for contrast against the main color */
+                        }
+                    }
+                }
+            }
+
+            .location-item {
+                display: flex;
+                text-align: center;
+                position: relative;
+                white-space: nowrap;
+
+                select {
+                    text-align: center;
+                }
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .sub-menu {
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    top: 100%;
+                    left: 0;
+                    list-style: none;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0s, opacity 0.3s ease-out;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #ffffffbd;
+                    border-radius: 20px;
+
+                    li {
+                        width: 100px;
+                        margin: 5px;
+                        opacity: 0;
+                        transform: translateY(-10px);
+                        transition: opacity 0.3s, transform 0.3s;
+
+
+                    }
+                }
+
+                &:hover {
+                    .sub-menu {
+                        visibility: visible;
+                        opacity: 1;
+
+                        li {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .find__title {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #7a7a7a;
+        }
+    }
+
+    .find__boxWrap {
+        width: 100%;
+        display: flex;
+        padding: 15px;
+        border-radius: 20px;
+        background-color: #F3F4F5;
+        flex-direction: column;
+        gap: 1rem;
+
+        .find__box {
+            width: 100%;
+            background-color: #ffffff;
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 2px 1px 1px 2px rgba(128, 128, 128, 0.11);
+            overflow: hidden;
+            flex-direction: column;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f8f4f4e0;
+            }
+        }
+    }
+
+
+    .box01 {
+        padding: 5px;
+
+        h2 {
+            padding-left: 10px;
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+
+    }
+
+    .box02 {
+        display: flex;
+        flex-direction: column;
+
+        .boxInfo {
+            padding: 10px;
+            display: flex;
+
+            .name {
+                min-width: 60px;
+                text-align: center;
+                border-radius: 5px;
+                margin-right: 5px;
+                color: #979797;
+            }
+
+            .anwser {}
+        }
+    }
+}
